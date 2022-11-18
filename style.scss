@@ -1,0 +1,274 @@
+@import "./mixins";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1.7;
+}   
+
+a {
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Verdana;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    text-decoration: none;    
+}
+
+li{
+    list-style-type: none;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 700;
+}
+
+$brand: black;
+$white: white;
+$brand-hover: #FF1C61;
+$back-shadow: 4px 2px 50px $brand;
+
+/* Nav Bar */
+.navbar{
+    background-color: var(--dark1);
+    
+    & .nav-link {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-right: 10px;
+    }
+}
+
+.navbar .navbar-nav .nav-link:hover{
+    color: $brand;
+}
+
+.navbar .navbar-nav .nav-link.active{
+    color: $brand;
+}
+
+
+/* Button */
+
+.btn {
+    padding: 14px 27px;
+    margin: 0px 16px 0px 0px;
+    border-radius: 12px;
+    font-weight: 500;
+    @include transition-ease;
+
+    &-brand{
+        background-color: $brand;
+        border-color: 1px solid $brand;
+        color: $white;
+
+        &:hover{
+            background-color: $brand-hover;
+            color: $white;
+        }
+    }
+
+    &-outline-brand{
+        background-color: transparent;
+        border-color: $brand;
+        color: $brand;
+
+        &:hover{
+            background-color: $brand;
+            color: $white;
+        }
+    }
+}
+
+.slow{
+    @include transition-ease;
+}
+
+/* Grid */
+.two-col-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+@media (max-width: 992px){
+    .two-col-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px){
+    .two-col-grid{
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* Text Brand */
+.text-brand {
+    color: $brand-hover;
+}
+
+/* Section Title */
+
+.section-title {
+    text-align: center;
+    margin: 10px auto;
+    max-width: 600px;
+
+    & h1, h2, h3, h4, h5, h6 {
+        color: $brand;
+    }
+}
+
+/* Box */
+.box {
+
+    padding: 48px 28px;
+    @include transition-ease;
+    border-radius: 20px;
+    background-color: #fff3f3;
+    border: 1px solid rgba(137,93,251, 0.3);
+
+    &:hover {
+        box-shadow: $back-shadow;
+        cursor: pointer;
+    }
+}
+
+/* Icons */
+.icons {
+    font-size: 2rem;
+}
+
+#cont{
+    max-width: 1400px;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    margin: 50px auto;
+}
+
+.bg-img {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &.bg1 {
+        background: url("./images/model-3-bg.png");
+        background-attachment: fixed;
+        height: 100%;
+        background-size: cover;
+    }
+
+    &.bg2 {
+        background: url("./images/tesla_charging.jpg");
+        background-attachment: fixed;
+        height: 100%;
+        background-size: cover;
+    }
+}
+
+/* Cars */
+.cars {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    & .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: flex-end;
+        padding: 30px;
+        @include transition-ease;
+        padding: 15px;
+    }
+
+    & img {
+        @include transition-ease;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    & .btn {
+        background-color: $brand;
+        border-color: 1px solid $brand;
+        white-space: nowrap;
+        color: white;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.9s ease;
+
+        &-brand {
+            &:hover {
+                background-color: $brand-hover;
+                color: $white;
+            }
+        }
+    }
+
+    &:hover .btn-brand{
+        opacity: 1;
+        top: 50%;
+    }
+
+    &:hover img{
+        transform: scale(1.1);
+        filter: blur(2px);
+    }
+}
+
+/* Footer */
+
+
+.footer-top{
+    padding: 6rem 0rem 0rem 0rem;
+}
+
+.footer-bottom{
+    padding: 4rem 0rem;
+}
+
+.social-links a {
+    font-size: 19px;
+    margin-right: 4px;
+}
+
+.footer-top ul li {
+    margin-bottom: 13px;
+}
+
+.divider{
+    width: 100%;
+    height: 1px;
+    background-color: #a3a3a3;
+    display: inline-block;
+    margin: 8px 0;
+}

@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Verdana;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* Nav Bar */
+.navbar {
+  background-color: var(--dark1);
+}
+.navbar .nav-link {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: black;
+}
+
+.navbar .navbar-nav .nav-link.active {
+  color: black;
+}
+
+/* Button */
+.btn {
+  padding: 14px 27px;
+  margin: 0px 16px 0px 0px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 1s ease;
+}
+.btn-brand {
+  background-color: black;
+  border-color: 1px solid black;
+  color: white;
+}
+.btn-brand:hover {
+  background-color: #FF1C61;
+  color: white;
+}
+.btn-outline-brand {
+  background-color: transparent;
+  border-color: black;
+  color: black;
+}
+.btn-outline-brand:hover {
+  background-color: black;
+  color: white;
+}
+
+.slow {
+  transition: all 1s ease;
+}
+
+/* Grid */
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+@media (max-width: 992px) {
+  .two-col-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .two-col-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+/* Text Brand */
+.text-brand {
+  color: #FF1C61;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  margin: 10px auto;
+  max-width: 600px;
+}
+.section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
+  color: black;
+}
+
+/* Box */
+.box {
+  padding: 48px 28px;
+  transition: all 1s ease;
+  border-radius: 20px;
+  background-color: #fff3f3;
+  border: 1px solid rgba(137, 93, 251, 0.3);
+}
+.box:hover {
+  box-shadow: 4px 2px 50px black;
+  cursor: pointer;
+}
+
+/* Icons */
+.icons {
+  font-size: 2rem;
+}
+
+#cont {
+  max-width: 1400px;
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  margin: 50px auto;
+}
+
+.bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.bg-img.bg1 {
+  background: url("./images/model-3-bg.png");
+  background-attachment: fixed;
+  height: 100%;
+  background-size: cover;
+}
+.bg-img.bg2 {
+  background: url("./images/tesla_charging.jpg");
+  background-attachment: fixed;
+  height: 100%;
+  background-size: cover;
+}
+
+/* Cars */
+.cars {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.cars .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  transition: all 1s ease;
+  padding: 15px;
+}
+.cars img {
+  transition: all 1s ease;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cars:hover img {
+  transform: scale(1.1);
+}
+.cars .btn {
+  background-color: black;
+  border-color: 1px solid black;
+  white-space: nowrap;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+.cars .btn-brand:hover {
+  background-color: #FF1C61;
+  color: white;
+}
+.cars:hover .btn-brand {
+  opacity: 1;
+  top: 50%;
+}
+.cars:hover img {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
+
+/* Footer */
+.footer-top {
+  padding: 6rem 0rem 0rem 0rem;
+}
+
+.footer-bottom {
+  padding: 4rem 0rem;
+}
+
+.social-links a {
+  font-size: 19px;
+  margin-right: 4px;
+}
+
+.footer-top ul li {
+  margin-bottom: 13px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #a3a3a3;
+  display: inline-block;
+  margin: 8px 0;
+}/*# sourceMappingURL=style.css.map */
