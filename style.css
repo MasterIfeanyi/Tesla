@@ -218,6 +218,9 @@ h1, h2, h3, h4, h5, h6 {
 .footer-top {
   padding: 6rem 0rem 0rem 0rem;
 }
+.footer-top a:hover {
+  color: #FF1C61;
+}
 
 .footer-bottom {
   padding: 4rem 0rem;

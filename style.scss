@@ -249,6 +249,13 @@ $back-shadow: 4px 2px 50px $brand;
 
 
 .footer-top{
+
+    a {
+        &:hover{
+            color: $brand-hover;
+        }
+    }
+
     padding: 6rem 0rem 0rem 0rem;
 }
 
